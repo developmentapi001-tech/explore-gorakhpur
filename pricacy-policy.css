@@ -1,0 +1,1325 @@
+/* =========================================================
+   PRIVACY POLICY PAGE
+   Explore Gorakhpur
+   Fully Responsive: 240px → 1920px+
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.privacy-hero,
+.privacy-hero *,
+.privacy-content,
+.privacy-content *,
+.privacy-footer,
+.privacy-footer * {
+    box-sizing: border-box;
+}
+
+
+.privacy-hero,
+.privacy-content,
+.privacy-footer {
+    width: 100%;
+}
+
+
+.privacy-hero img,
+.privacy-content img,
+.privacy-footer img {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   PRIVACY HERO
+========================================================= */
+
+.privacy-hero {
+    position: relative;
+    min-height: 330px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #06243b 0%,
+            #087cf5 100%
+        );
+}
+
+
+.privacy-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    right: -160px;
+    top: -230px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.07);
+}
+
+
+.privacy-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    left: -150px;
+    bottom: -230px;
+
+    border-radius: 50%;
+
+    background: rgba(14,165,164,0.15);
+}
+
+
+.privacy-hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(
+        1180px,
+        calc(100% - 64px)
+    );
+
+    margin: 0 auto;
+
+    padding: 65px 0;
+}
+
+
+.privacy-label {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: #cce7ff;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    line-height: 1.3;
+}
+
+
+.privacy-hero h1 {
+    margin: 0 0 15px;
+
+    color: #ffffff;
+
+    font-size: clamp(
+        34px,
+        4vw,
+        54px
+    );
+
+    font-weight: 800;
+
+    line-height: 1.12;
+}
+
+
+.privacy-hero p {
+    width: min(700px, 100%);
+
+    margin: 0;
+
+    color: rgba(
+        255,
+        255,
+        255,
+        0.88
+    );
+
+    font-size: 16px;
+
+    line-height: 1.75;
+}
+
+
+.privacy-updated {
+    display: inline-flex;
+
+    margin-top: 22px;
+
+    padding: 9px 14px;
+
+    border: 1px solid
+        rgba(255,255,255,0.20);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255,255,255,0.10);
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PRIVACY CONTENT
+========================================================= */
+
+.privacy-content {
+    width: min(
+        980px,
+        calc(100% - 40px)
+    );
+
+    margin: 0 auto;
+
+    padding: 60px 0 80px;
+}
+
+
+.privacy-card {
+    width: 100%;
+
+    margin-bottom: 22px;
+
+    padding: 34px 38px;
+
+    border: 1px solid #e2eaf2;
+
+    border-radius: 22px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 14px 35px
+        rgba(15,23,42,0.06);
+}
+
+
+.privacy-card:last-child {
+    margin-bottom: 0;
+}
+
+
+.privacy-card h2 {
+    margin: 0 0 15px;
+
+    color: #17324d;
+
+    font-size: 24px;
+    font-weight: 800;
+
+    line-height: 1.3;
+}
+
+
+.privacy-card p {
+    margin: 0 0 14px;
+
+    color: #526579;
+
+    font-size: 15px;
+
+    line-height: 1.85;
+}
+
+
+.privacy-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+.privacy-card ul {
+    margin: 10px 0 0;
+
+    padding-left: 22px;
+
+    color: #526579;
+}
+
+
+.privacy-card li {
+    margin-bottom: 9px;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+.privacy-card strong {
+    color: #17324d;
+}
+
+
+.privacy-card a {
+    color: #087cf5;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.privacy-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   PRIVACY FOOTER
+========================================================= */
+
+.privacy-footer {
+    position: relative;
+
+    width: 100%;
+
+    padding: 65px 0 0;
+
+    background: #06243b;
+
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   FOOTER MAIN CONTAINER
+========================================================= */
+
+.privacy-footer-container {
+    width: min(
+        1180px,
+        calc(100% - 64px)
+    );
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(260px, 1.5fr)
+        minmax(130px, 1fr)
+        minmax(130px, 1fr)
+        minmax(170px, 1fr);
+
+    gap: 45px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
+
+.privacy-footer-brand {
+    min-width: 0;
+}
+
+
+.privacy-footer-logo {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+
+.privacy-footer-logo-mark {
+    width: 58px;
+    height: 58px;
+
+    min-width: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #087cf5,
+            #0ea5a4
+        );
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 10px 25px
+        rgba(8,124,245,0.30);
+}
+
+
+.privacy-footer-logo-text {
+    min-width: 0;
+}
+
+
+.privacy-footer-logo-text h3 {
+    margin: 0 0 4px;
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    line-height: 1.25;
+}
+
+
+.privacy-footer-logo-text span {
+    color:
+        rgba(255,255,255,0.62);
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+.privacy-footer-brand > p {
+    width: min(
+        370px,
+        100%
+    );
+
+    margin: 20px 0 0;
+
+    color:
+        rgba(255,255,255,0.68);
+
+    font-size: 14px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.privacy-footer-column {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.privacy-footer-column h4 {
+    margin: 0 0 20px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    line-height: 1.3;
+}
+
+
+.privacy-footer-column a {
+    display: block;
+
+    width: fit-content;
+
+    max-width: 100%;
+
+    margin: 0 0 13px;
+
+    color:
+        rgba(255,255,255,0.68);
+
+    font-size: 14px;
+
+    line-height: 1.45;
+
+    text-decoration: none;
+
+    transition:
+        color .25s ease,
+        transform .25s ease;
+}
+
+
+.privacy-footer-column a:hover {
+    color: #ffffff;
+
+    transform:
+        translateX(3px);
+}
+
+
+/* =========================================================
+   DISCOVER GORAKHPUR
+========================================================= */
+
+.privacy-footer-discover p {
+    width: 100%;
+
+    margin: 0 0 13px;
+
+    color:
+        rgba(255,255,255,0.68);
+
+    font-size: 14px;
+
+    line-height: 1.55;
+}
+
+
+.privacy-footer-discover p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+   COPYRIGHT LEFT
+   BACK TO TOP RIGHT
+========================================================= */
+
+.privacy-footer-bottom {
+    width: min(
+        1180px,
+        calc(100% - 64px)
+    );
+
+    min-height: 76px;
+
+    margin: 45px auto 0;
+
+    padding: 22px 0;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.10);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 24px;
+}
+
+
+.privacy-footer-bottom p {
+    flex: 1 1 auto;
+
+    min-width: 0;
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,0.58);
+
+    font-size: 12px;
+
+    line-height: 1.55;
+
+    text-align: left;
+}
+
+
+.privacy-footer-bottom a {
+    flex: 0 0 auto;
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,0.72);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    text-align: right;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+
+.privacy-footer-bottom a:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media screen and (min-width: 1440px) {
+
+    .privacy-footer-container,
+    .privacy-footer-bottom {
+        width: min(
+            1280px,
+            calc(100% - 80px)
+        );
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   768 - 1023
+========================================================= */
+
+@media screen and
+(min-width: 768px) and
+(max-width: 1023px) {
+
+    .privacy-hero-content {
+        width:
+            calc(100% - 48px);
+    }
+
+
+    .privacy-content {
+        width:
+            calc(100% - 48px);
+
+        padding:
+            50px 0 65px;
+    }
+
+
+    .privacy-card {
+        padding: 30px;
+    }
+
+
+    .privacy-footer-container {
+        width:
+            calc(100% - 48px);
+
+        grid-template-columns:
+            1.4fr
+            1fr
+            1fr;
+
+        gap: 35px;
+    }
+
+
+    .privacy-footer-discover {
+        grid-column:
+            2 / 4;
+    }
+
+
+    .privacy-footer-bottom {
+        width:
+            calc(100% - 48px);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   480 - 767
+========================================================= */
+
+@media screen and
+(min-width: 480px) and
+(max-width: 767px) {
+
+    .privacy-hero {
+        min-height: 280px;
+    }
+
+
+    .privacy-hero-content {
+        width:
+            calc(100% - 36px);
+
+        padding:
+            48px 0;
+    }
+
+
+    .privacy-hero h1 {
+        font-size: 36px;
+    }
+
+
+    .privacy-hero p {
+        font-size: 14px;
+    }
+
+
+    .privacy-content {
+        width:
+            calc(100% - 28px);
+
+        padding:
+            38px 0 55px;
+    }
+
+
+    .privacy-card {
+        padding:
+            26px 22px;
+
+        border-radius: 18px;
+    }
+
+
+    .privacy-card h2 {
+        font-size: 21px;
+    }
+
+
+    .privacy-card p,
+    .privacy-card li {
+        font-size: 14px;
+    }
+
+
+    .privacy-footer {
+        padding-top: 50px;
+    }
+
+
+    .privacy-footer-container {
+        width:
+            calc(100% - 30px);
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            35px 25px;
+    }
+
+
+    .privacy-footer-brand {
+        grid-column:
+            1 / -1;
+    }
+
+
+    .privacy-footer-discover {
+        grid-column:
+            1 / -1;
+    }
+
+
+    .privacy-footer-bottom {
+        width:
+            calc(100% - 30px);
+
+        margin-top: 35px;
+
+        padding:
+            19px 0;
+
+        gap: 14px;
+    }
+
+
+    .privacy-footer-bottom p {
+        font-size: 11px;
+    }
+
+
+    .privacy-footer-bottom a {
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   375 - 479
+========================================================= */
+
+@media screen and
+(min-width: 375px) and
+(max-width: 479px) {
+
+    .privacy-hero {
+        min-height: 255px;
+    }
+
+
+    .privacy-hero-content {
+        width:
+            calc(100% - 28px);
+
+        padding:
+            38px 0;
+    }
+
+
+    .privacy-label {
+        font-size: 10px;
+    }
+
+
+    .privacy-hero h1 {
+        font-size: 31px;
+    }
+
+
+    .privacy-hero p {
+        font-size: 13px;
+    }
+
+
+    .privacy-content {
+        width:
+            calc(100% - 24px);
+
+        padding:
+            30px 0 45px;
+    }
+
+
+    .privacy-card {
+        padding:
+            22px 18px;
+
+        margin-bottom: 16px;
+
+        border-radius: 17px;
+    }
+
+
+    .privacy-card h2 {
+        font-size: 20px;
+    }
+
+
+    .privacy-card p,
+    .privacy-card li {
+        font-size: 13px;
+    }
+
+
+    .privacy-footer {
+        padding-top: 43px;
+    }
+
+
+    .privacy-footer-container {
+        width:
+            calc(100% - 24px);
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            30px 20px;
+    }
+
+
+    .privacy-footer-brand {
+        grid-column:
+            1 / -1;
+    }
+
+
+    .privacy-footer-discover {
+        grid-column:
+            1 / -1;
+    }
+
+
+    .privacy-footer-logo-mark {
+        width: 50px;
+        height: 50px;
+
+        min-width: 50px;
+
+        border-radius: 14px;
+
+        font-size: 18px;
+    }
+
+
+    .privacy-footer-logo-text h3 {
+        font-size: 18px;
+    }
+
+
+    .privacy-footer-logo-text span {
+        font-size: 10px;
+    }
+
+
+    .privacy-footer-brand > p {
+        font-size: 12px;
+    }
+
+
+    .privacy-footer-column h4 {
+        font-size: 14px;
+    }
+
+
+    .privacy-footer-column a,
+    .privacy-footer-discover p {
+        font-size: 12px;
+    }
+
+
+    .privacy-footer-bottom {
+        width:
+            calc(100% - 24px);
+
+        min-height: 64px;
+
+        margin-top: 30px;
+
+        padding:
+            16px 0;
+
+        gap: 10px;
+    }
+
+
+    .privacy-footer-bottom p {
+        font-size: 10px;
+    }
+
+
+    .privacy-footer-bottom a {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   360 - 374
+========================================================= */
+
+@media screen and
+(min-width: 360px) and
+(max-width: 374px) {
+
+    .privacy-hero-content {
+        width:
+            calc(100% - 24px);
+    }
+
+
+    .privacy-hero h1 {
+        font-size: 29px;
+    }
+
+
+    .privacy-content {
+        width:
+            calc(100% - 20px);
+    }
+
+
+    .privacy-card {
+        padding:
+            20px 16px;
+
+        border-radius: 16px;
+    }
+
+
+    .privacy-card h2 {
+        font-size: 19px;
+    }
+
+
+    .privacy-card p,
+    .privacy-card li {
+        font-size: 12.5px;
+    }
+
+
+    .privacy-footer {
+        padding-top: 40px;
+    }
+
+
+    .privacy-footer-container {
+        width:
+            calc(100% - 20px);
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            28px 14px;
+    }
+
+
+    .privacy-footer-brand,
+    .privacy-footer-discover {
+        grid-column:
+            1 / -1;
+    }
+
+
+    .privacy-footer-logo-mark {
+        width: 46px;
+        height: 46px;
+
+        min-width: 46px;
+
+        font-size: 16px;
+    }
+
+
+    .privacy-footer-logo-text h3 {
+        font-size: 16px;
+    }
+
+
+    .privacy-footer-logo-text span {
+        font-size: 9px;
+    }
+
+
+    .privacy-footer-brand > p {
+        font-size: 11px;
+    }
+
+
+    .privacy-footer-column h4 {
+        font-size: 13px;
+    }
+
+
+    .privacy-footer-column a,
+    .privacy-footer-discover p {
+        font-size: 11px;
+    }
+
+
+    .privacy-footer-bottom {
+        width:
+            calc(100% - 20px);
+
+        min-height: 58px;
+
+        margin-top: 27px;
+
+        padding:
+            14px 0;
+
+        gap: 7px;
+    }
+
+
+    .privacy-footer-bottom p {
+        font-size: 9px;
+    }
+
+
+    .privacy-footer-bottom a {
+        font-size: 9px;
+    }
+
+}
+
+
+/* =========================================================
+   240 - 359
+   SPECIAL 240 × 320 SUPPORT
+========================================================= */
+
+@media screen and
+(min-width: 240px) and
+(max-width: 359px) {
+
+    .privacy-hero {
+        min-height: 235px;
+    }
+
+
+    .privacy-hero-content {
+        width:
+            calc(100% - 20px);
+
+        padding:
+            30px 0;
+    }
+
+
+    .privacy-label {
+        font-size: 8px;
+
+        letter-spacing:
+            1.2px;
+    }
+
+
+    .privacy-hero h1 {
+        font-size: 26px;
+    }
+
+
+    .privacy-hero p {
+        font-size: 11px;
+
+        line-height: 1.55;
+    }
+
+
+    .privacy-updated {
+        font-size: 9px;
+    }
+
+
+    .privacy-content {
+        width:
+            calc(100% - 16px);
+
+        padding:
+            22px 0 32px;
+    }
+
+
+    .privacy-card {
+        padding:
+            17px 13px;
+
+        margin-bottom: 12px;
+
+        border-radius: 14px;
+    }
+
+
+    .privacy-card h2 {
+        font-size: 17px;
+    }
+
+
+    .privacy-card p,
+    .privacy-card li {
+        font-size: 11px;
+
+        line-height: 1.6;
+    }
+
+
+    /* FOOTER */
+
+    .privacy-footer {
+        padding-top: 34px;
+    }
+
+
+    .privacy-footer-container {
+        width:
+            calc(100% - 16px);
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            24px 10px;
+    }
+
+
+    .privacy-footer-brand {
+        grid-column:
+            1 / -1;
+    }
+
+
+    .privacy-footer-discover {
+        grid-column:
+            1 / -1;
+    }
+
+
+    .privacy-footer-logo {
+        gap: 8px;
+    }
+
+
+    .privacy-footer-logo-mark {
+        width: 40px;
+        height: 40px;
+
+        min-width: 40px;
+
+        border-radius: 10px;
+
+        font-size: 14px;
+    }
+
+
+    .privacy-footer-logo-text h3 {
+        margin-bottom: 2px;
+
+        font-size: 14px;
+    }
+
+
+    .privacy-footer-logo-text span {
+        font-size: 8px;
+    }
+
+
+    .privacy-footer-brand > p {
+        width: 100%;
+
+        margin-top: 11px;
+
+        font-size: 10px;
+
+        line-height: 1.55;
+    }
+
+
+    .privacy-footer-column h4 {
+        margin-bottom: 11px;
+
+        font-size: 12px;
+    }
+
+
+    .privacy-footer-column a,
+    .privacy-footer-discover p {
+        margin-bottom: 8px;
+
+        font-size: 10px;
+
+        line-height: 1.4;
+    }
+
+
+    /* BOTTOM */
+
+    .privacy-footer-bottom {
+        width:
+            calc(100% - 16px);
+
+        min-height: 55px;
+
+        margin-top: 23px;
+
+        padding:
+            12px 0;
+
+        gap: 6px;
+    }
+
+
+    .privacy-footer-bottom p {
+        flex: 1 1 auto;
+
+        min-width: 0;
+
+        font-size: 8px;
+
+        line-height: 1.35;
+
+        text-align: left;
+    }
+
+
+    .privacy-footer-bottom a {
+        flex: 0 0 auto;
+
+        margin-left: auto;
+
+        font-size: 8px;
+
+        line-height: 1.3;
+
+        text-align: right;
+
+        white-space: nowrap;
+    }
+
+}
+
+
+/* =========================================================
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media screen and
+(max-height: 500px) and
+(orientation: landscape) and
+(max-width: 900px) {
+
+    .privacy-hero {
+        min-height: 240px;
+    }
+
+
+    .privacy-hero-content {
+        padding:
+            30px 0;
+    }
+
+
+    .privacy-content {
+        padding:
+            30px 0 45px;
+    }
+
+}
+
+
+/* =========================================================
+   FINAL SAFETY
+========================================================= */
+
+.privacy-hero,
+.privacy-content,
+.privacy-footer {
+    max-width: 100%;
+}
+
+
+.privacy-footer a,
+.privacy-content a {
+    overflow-wrap: break-word;
+}

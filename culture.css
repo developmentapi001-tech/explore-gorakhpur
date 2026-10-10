@@ -1,0 +1,1848 @@
+/* =========================================================
+   CULTURE PAGE
+   EXPLORE GORAKHPUR
+   PREMIUM CULTURE DESIGN
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.culture-page {
+    background: #ffffff;
+    color: #17324d;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.culture-hero {
+    position: relative;
+
+    min-height: 360px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            #05243a 0%,
+            #063b57 42%,
+            rgba(6,59,87,.72) 65%,
+            rgba(6,59,87,.18) 100%
+        );
+
+    color: #ffffff;
+}
+
+
+/*
+   If your hero has a background image,
+   put it directly in HTML using:
+   style="background-image:url(...)"
+*/
+
+.culture-hero::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4,28,45,.94) 0%,
+            rgba(4,28,45,.78) 38%,
+            rgba(4,28,45,.32) 72%,
+            rgba(4,28,45,.08) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* Decorative circle */
+
+.culture-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    left: -150px;
+    top: -90px;
+
+    border: 1px solid
+        rgba(255,255,255,.10);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 45px
+        rgba(255,255,255,.025),
+        0 0 0 90px
+        rgba(255,255,255,.018);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.culture-hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: min(
+        1180px,
+        calc(100% - 64px)
+    );
+
+    margin: 0 auto;
+
+    padding: 70px 0;
+}
+
+
+.culture-hero-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 8px 16px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(24,183,190,.18);
+
+    border: 1px solid
+        rgba(75,220,220,.30);
+
+    color: #7ee8e4;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.culture-hero h1 {
+
+    max-width: 620px;
+
+    margin: 18px 0 15px;
+
+    color: #ffffff;
+
+    font-size: clamp(
+        40px,
+        5vw,
+        62px
+    );
+
+    line-height: 1.04;
+
+    letter-spacing: -1.5px;
+}
+
+
+.culture-hero h1 span {
+
+    color: #43ddd8;
+}
+
+
+.culture-hero p {
+
+    max-width: 570px;
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,.78);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+.culture-hero-line {
+
+    width: 38px;
+    height: 3px;
+
+    margin-top: 22px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #27d8d1,
+            #087cf5
+        );
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   OUR CULTURE INTRO
+========================================================= */
+
+.culture-intro {
+
+    position: relative;
+
+    padding: 55px 20px 50px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f9fdff,
+            #ffffff
+        );
+
+    overflow: hidden;
+}
+
+
+/* Decorative circles */
+
+.culture-intro::before,
+.culture-intro::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 230px;
+    height: 230px;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(8,124,245,.08);
+}
+
+
+.culture-intro::before {
+
+    left: -120px;
+    top: 10px;
+}
+
+
+.culture-intro::after {
+
+    right: -120px;
+    top: 10px;
+}
+
+
+.culture-intro > span {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #087cf5;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.6px;
+}
+
+
+.culture-intro h2 {
+
+    margin: 0 0 14px;
+
+    color: #173b5a;
+
+    font-size: 30px;
+
+    font-weight: 800;
+}
+
+
+.culture-intro p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #70849a;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   CULTURAL PLACES SECTION
+========================================================= */
+
+.culture-places {
+
+    width: min(
+        1120px,
+        calc(100% - 64px)
+    );
+
+    margin: 0 auto;
+
+    padding: 45px 0 60px;
+}
+
+
+.culture-section-heading {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 25px;
+}
+
+
+.culture-section-heading > div:first-child {
+
+    max-width: 600px;
+}
+
+
+.culture-section-heading span {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #0ea5a4;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+
+.culture-section-heading h2 {
+
+    margin: 0 0 8px;
+
+    color: #173b5a;
+
+    font-size: 28px;
+}
+
+
+.culture-section-heading p {
+
+    margin: 0;
+
+    color: #718397;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* View all button */
+
+.culture-view-all {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 11px 17px;
+
+    border: 1px solid #36cbd0;
+
+    border-radius: 25px;
+
+    background: #ffffff;
+
+    color: #079ca2;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    transition:
+        .3s ease;
+}
+
+
+.culture-view-all:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #087cf5,
+            #0ea5a4
+        );
+
+    color: #ffffff;
+
+    border-color: transparent;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   CULTURAL PLACE GRID
+========================================================= */
+
+.culture-place-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   CULTURAL PLACE CARD
+========================================================= */
+
+.culture-place-item {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        45px 105px 1fr 35px;
+
+    align-items: center;
+
+    gap: 15px;
+
+    min-height: 100px;
+
+    padding: 10px 13px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5edf4;
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 7px 20px
+        rgba(15,23,42,.045);
+
+    text-decoration: none;
+
+    overflow: hidden;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+
+.culture-place-item:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color: #b8dcf3;
+
+    box-shadow:
+        0 14px 30px
+        rgba(8,124,245,.10);
+}
+
+
+/* =========================================================
+   PLACE NUMBER
+========================================================= */
+
+.culture-place-number {
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf6ff,
+            #e7f8f6
+        );
+
+    color: #087cf5;
+
+    font-size: 11px;
+
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   PLACE IMAGE
+========================================================= */
+
+.culture-place-image {
+
+    width: 105px;
+    height: 72px;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    background: #edf5f9;
+}
+
+
+.culture-place-image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform .4s ease;
+}
+
+
+.culture-place-item:hover
+.culture-place-image img {
+
+    transform:
+        scale(1.08);
+}
+
+
+/* =========================================================
+   PLACE INFORMATION
+========================================================= */
+
+.culture-place-info h3 {
+
+    margin: 0 0 6px;
+
+    color: #173b5a;
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+.culture-place-info p {
+
+    margin: 0;
+
+    color: #718397;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   PLACE ARROW
+========================================================= */
+
+.culture-place-arrow {
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        #eef7ff;
+
+    color: #087cf5;
+
+    font-size: 17px;
+
+    transition:
+        .3s ease;
+}
+
+
+.culture-place-item:hover
+.culture-place-arrow {
+
+    background:
+        linear-gradient(
+            135deg,
+            #087cf5,
+            #0ea5a4
+        );
+
+    color: #ffffff;
+
+    transform:
+        translateX(3px);
+}
+
+
+/* =========================================================
+   FESTIVALS & FAIRS
+========================================================= */
+
+.culture-festivals {
+
+    position: relative;
+
+    padding: 55px 0 65px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #05243a,
+            #063b57
+        );
+
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* Decorative circles */
+
+.culture-festivals::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    left: -240px;
+    bottom: -220px;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(255,255,255,.09);
+
+    box-shadow:
+        0 0 0 45px
+        rgba(255,255,255,.018),
+        0 0 0 90px
+        rgba(255,255,255,.012);
+}
+
+
+.culture-festivals::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    right: -160px;
+    top: -170px;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(255,255,255,.08);
+}
+
+
+/* =========================================================
+   FESTIVAL CONTAINER
+========================================================= */
+
+.culture-festivals
+.directory-container {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: min(
+        1180px,
+        calc(100% - 64px)
+    );
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   FESTIVAL HEADING
+========================================================= */
+
+.culture-festivals
+.directory-heading {
+
+    margin-bottom: 28px;
+}
+
+
+.culture-festivals
+.directory-heading > span {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #54ded8;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.6px;
+}
+
+
+.culture-festivals
+.directory-heading h2 {
+
+    margin: 0 0 9px;
+
+    color: #ffffff;
+
+    font-size: 30px;
+}
+
+
+.culture-festivals
+.directory-heading p {
+
+    max-width: 560px;
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,.68);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FESTIVAL GRID
+========================================================= */
+
+.festival-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   FESTIVAL CARD
+========================================================= */
+
+.festival-card {
+
+    position: relative;
+
+    min-height: 205px;
+
+    padding: 8px 9px 13px;
+
+    background:
+        rgba(255,255,255,.075);
+
+    border: 1px solid
+        rgba(67,214,219,.35);
+
+    border-radius: 13px;
+
+    overflow: hidden;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        border-color .3s ease;
+}
+
+
+.festival-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    background:
+        rgba(255,255,255,.12);
+
+    border-color:
+        rgba(67,214,219,.65);
+}
+
+
+/* =========================================================
+   FESTIVAL IMAGE
+========================================================= */
+
+.festival-card-image {
+
+    width: 100%;
+    height: 82px;
+
+    margin-bottom: 10px;
+
+    overflow: hidden;
+
+    border-radius: 9px;
+}
+
+
+.festival-card-image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform .4s ease;
+}
+
+
+.festival-card:hover
+.festival-card-image img {
+
+    transform:
+        scale(1.08);
+}
+
+
+/* =========================================================
+   FESTIVAL ICON
+========================================================= */
+
+.festival-icon {
+
+    position: absolute;
+
+    top: 61px;
+    left: 16px;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        #087cf5;
+
+    border: 2px solid
+        rgba(255,255,255,.75);
+
+    font-size: 14px;
+
+    z-index: 4;
+}
+
+
+/* =========================================================
+   FESTIVAL NUMBER
+========================================================= */
+
+.festival-number {
+
+    position: absolute;
+
+    top: 91px;
+    left: 15px;
+
+    color:
+        rgba(52,214,219,.45);
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   FESTIVAL CONTENT
+========================================================= */
+
+.festival-card h3 {
+
+    margin: 15px 4px 6px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+.festival-card p {
+
+    margin: 0 4px 10px;
+
+    color:
+        rgba(255,255,255,.66);
+
+    font-size: 9px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   FESTIVAL TAG
+========================================================= */
+
+.festival-card > span {
+
+    display: inline-block;
+
+    margin-left: 4px;
+
+    padding: 5px 8px;
+
+    border-radius: 15px;
+
+    background:
+        #087cf5;
+
+    color: #ffffff;
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   BACK TO CATEGORIES
+========================================================= */
+
+.culture-back {
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 35px 20px 55px;
+
+    background:
+        #f7fcff;
+}
+
+
+.culture-back a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 11px 20px;
+
+    border: 1px solid #31cbd0;
+
+    border-radius: 25px;
+
+    background: #ffffff;
+
+    color: #087c9d;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    transition:
+        .3s ease;
+}
+
+
+.culture-back a:hover {
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #087cf5,
+            #0ea5a4
+        );
+
+    border-color: transparent;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .festival-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .culture-place-list {
+
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .culture-hero {
+
+        min-height: 330px;
+    }
+
+
+    .culture-hero-content {
+
+        width:
+            calc(100% - 40px);
+
+        padding: 55px 0;
+    }
+
+
+    .culture-hero h1 {
+
+        font-size: 40px;
+    }
+
+
+    .culture-hero p {
+
+        font-size: 12px;
+    }
+
+
+    .culture-intro {
+
+        padding:
+            45px 20px;
+    }
+
+
+    .culture-intro h2 {
+
+        font-size: 25px;
+    }
+
+
+    .culture-places {
+
+        width:
+            calc(100% - 40px);
+
+        padding:
+            40px 0 50px;
+    }
+
+
+    .culture-section-heading {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .culture-section-heading h2 {
+
+        font-size: 25px;
+    }
+
+
+    .culture-place-list {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 12px;
+    }
+
+
+    .culture-place-item {
+
+        grid-template-columns:
+            40px 85px 1fr 30px;
+
+        gap: 10px;
+
+        min-height: 90px;
+
+        padding: 9px;
+    }
+
+
+    .culture-place-number {
+
+        width: 34px;
+        height: 34px;
+
+        font-size: 10px;
+    }
+
+
+    .culture-place-image {
+
+        width: 85px;
+        height: 62px;
+    }
+
+
+    .culture-place-info h3 {
+
+        font-size: 11px;
+    }
+
+
+    .culture-place-info p {
+
+        font-size: 8px;
+    }
+
+
+    .culture-place-arrow {
+
+        width: 27px;
+        height: 27px;
+
+        font-size: 14px;
+    }
+
+
+    .culture-festivals {
+
+        padding:
+            50px 0;
+    }
+
+
+    .culture-festivals
+    .directory-container {
+
+        width:
+            calc(100% - 40px);
+    }
+
+
+    .culture-festivals
+    .directory-heading h2 {
+
+        font-size: 27px;
+    }
+
+
+    .festival-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+
+    .festival-card {
+
+        min-height: 210px;
+
+        padding: 7px;
+    }
+
+
+    .festival-card-image {
+
+        height: 75px;
+    }
+
+
+    .festival-card h3 {
+
+        font-size: 11px;
+    }
+
+
+    .festival-card p {
+
+        font-size: 8px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .culture-hero h1 {
+
+        font-size: 34px;
+    }
+
+
+    .culture-place-item {
+
+        grid-template-columns:
+            38px 78px 1fr 27px;
+    }
+
+
+    .culture-place-image {
+
+        width: 78px;
+        height: 58px;
+    }
+
+
+    .festival-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .festival-card {
+
+        min-height: 225px;
+    }
+
+}
+
+/* =========================================================
+   PREMIUM FOOTER
+========================================================= */
+
+.footer {
+
+    position: relative;
+
+    width: 100%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #061b2b,
+            #071e2b
+        );
+
+    color: #ffffff;
+
+    padding: 58px 0 0;
+
+    overflow: hidden;
+}
+
+
+/* subtle blue glow */
+
+.footer::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    /* height: 420px; */
+
+    left: -190px;
+    bottom: -280px;
+
+    background:
+        rgba(0, 120, 255, .18);
+
+    filter: blur(75px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   FOOTER CONTAINER
+========================================================= */
+
+.footer-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(
+        1100px,
+        calc(100% - 64px)
+    );
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.6fr 1fr 1fr 1.25fr;
+
+    gap: 55px;
+
+    padding-bottom: 48px;
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
+
+.footer-brand {
+
+    max-width: 320px;
+}
+
+
+.footer-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    margin-bottom: 18px;
+}
+
+
+.footer-logo-mark {
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #087cf5
+        );
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 9px 24px
+        rgba(8,124,245,.30);
+}
+
+
+.footer-logo-text h3 {
+
+    margin: 0 0 4px;
+
+    color: #ffffff;
+
+    font-size: 19px;
+
+    font-weight: 800;
+}
+
+
+.footer-logo-text span {
+
+    color:
+        rgba(255,255,255,.55);
+
+    font-size: 11px;
+
+    letter-spacing: .4px;
+}
+
+
+.footer-brand > p {
+
+    margin: 0;
+
+    max-width: 300px;
+
+    color:
+        rgba(255,255,255,.63);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.footer-column h4 {
+
+    margin: 5px 0 18px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+
+.footer-column a {
+
+    margin-bottom: 12px;
+
+    color:
+        rgba(255,255,255,.62);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition:
+        color .25s ease,
+        transform .25s ease;
+}
+
+
+.footer-column a:hover {
+
+    color: #42c8ff;
+
+    transform:
+        translateX(3px);
+}
+
+
+/* =========================================================
+   DISCOVER INFORMATION
+========================================================= */
+
+.footer-info {
+
+    margin: 0 0 13px;
+
+    color:
+        rgba(255,255,255,.62);
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(
+        1100px,
+        calc(100% - 64px)
+    );
+
+    margin: 0 auto;
+
+    padding: 20px 0 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+
+.footer-bottom p {
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,.48);
+
+    font-size: 12px;
+}
+
+
+.footer-bottom a {
+
+    color:
+        rgba(255,255,255,.65);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition:
+        color .25s ease;
+}
+
+
+.footer-bottom a:hover {
+
+    color: #42c8ff;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .footer-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .footer {
+
+        padding-top: 45px;
+    }
+
+
+    .footer-container {
+
+        width:
+            calc(100% - 40px);
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 35px 25px;
+
+        padding-bottom: 35px;
+    }
+
+
+    .footer-brand {
+
+        grid-column:
+            1 / -1;
+
+        max-width: 100%;
+    }
+
+
+    .footer-bottom {
+
+        width:
+            calc(100% - 40px);
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .footer-container {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .footer-brand {
+
+        grid-column:
+            auto;
+    }
+
+}
+
+/* =====================================================
+   CULTURE PLACES
+   240px - 359px MOBILE FIX
+   ===================================================== */
+
+@media screen and (min-width: 240px) and (max-width: 359px) {
+
+    .culture-place-item {
+        display: grid !important;
+
+        grid-template-columns: 82px minmax(0, 1fr) !important;
+
+        grid-template-areas:
+            "number number"
+            "image info"
+            "image arrow" !important;
+
+        column-gap: 12px !important;
+        row-gap: 10px !important;
+
+        width: 100% !important;
+        box-sizing: border-box !important;
+
+        padding: 14px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* -----------------------------
+       NUMBER - TOP
+       ----------------------------- */
+
+    .culture-place-number {
+        grid-area: number !important;
+
+        width: 100% !important;
+
+        text-align: center !important;
+
+        font-size: 15px !important;
+        font-weight: 800 !important;
+
+        line-height: 1.2 !important;
+
+        margin: 0 !important;
+        padding: 0 0 3px !important;
+    }
+
+
+    /* -----------------------------
+       PHOTO - LEFT
+       ----------------------------- */
+
+    .culture-place-image {
+        grid-area: image !important;
+
+        width: 82px !important;
+        height: 82px !important;
+
+        min-width: 82px !important;
+        min-height: 82px !important;
+
+        border-radius: 12px !important;
+
+        overflow: hidden !important;
+
+        align-self: start !important;
+    }
+
+
+    .culture-place-image img {
+        display: block !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        max-width: none !important;
+
+        object-fit: cover !important;
+    }
+
+
+    /* -----------------------------
+       CONTENT - RIGHT
+       ----------------------------- */
+
+    .culture-place-info {
+        grid-area: info !important;
+
+        width: 100% !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        align-self: start !important;
+    }
+
+
+    .culture-place-info h3 {
+        margin: 0 0 6px !important;
+
+        font-size: 14px !important;
+
+        line-height: 1.3 !important;
+
+        overflow-wrap: break-word !important;
+        word-break: normal !important;
+    }
+
+
+    .culture-place-info p {
+        margin: 0 !important;
+
+        font-size: 11px !important;
+
+        line-height: 1.5 !important;
+
+        overflow-wrap: break-word !important;
+        word-break: normal !important;
+    }
+
+
+    /* -----------------------------
+       ARROW - CONTENT KE NICHE
+       ----------------------------- */
+
+    .culture-place-arrow {
+        grid-area: arrow !important;
+
+        width: 100% !important;
+
+        text-align: right !important;
+
+        margin: 0 !important;
+        padding: 2px 2px 0 0 !important;
+
+        font-size: 18px !important;
+
+        line-height: 1 !important;
+
+        align-self: end !important;
+    }
+
+}

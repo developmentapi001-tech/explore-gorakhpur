@@ -1,0 +1,643 @@
+/* =========================================
+   GORAKHNATH PHOTO GALLERY
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   GALLERY HERO
+========================================= */
+
+.gallery-hero {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 70px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #06243b,
+            #087cf5,
+            #0ea5a4
+        );
+
+    overflow: hidden;
+}
+
+.gallery-hero::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+
+    top: -220px;
+    right: -120px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.08);
+}
+
+.gallery-hero::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+
+    bottom: -180px;
+    left: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.07);
+}
+
+.gallery-hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(900px, 100%);
+
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.gallery-hero-label {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    color: rgba(255,255,255,0.85);
+}
+
+.gallery-hero h1 {
+    margin: 0 0 15px;
+
+    font-size: 48px;
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    color: #ffffff;
+}
+
+.gallery-hero p {
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: rgba(255,255,255,0.88);
+}
+
+
+/* =========================================
+   MAIN GALLERY AREA
+========================================= */
+
+.gallery-page {
+    width: 100%;
+
+    background: #f7fafc;
+
+    padding: 55px 0 70px;
+}
+
+.gallery-container {
+    width: min(1200px, calc(100% - 64px));
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.gallery-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 35px;
+
+    padding: 11px 17px;
+
+    border: 1px solid #dce7f0;
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: #17324d;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    box-shadow: 0 8px 20px rgba(15,23,42,0.06);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.gallery-back-btn:hover {
+    transform: translateX(-4px);
+
+    border-color: #087cf5;
+
+    color: #087cf5;
+
+    box-shadow: 0 12px 25px rgba(8,124,245,0.12);
+}
+
+
+/* =========================================
+   GALLERY HEADING
+========================================= */
+
+.gallery-heading {
+    margin-bottom: 35px;
+}
+
+.gallery-heading .detail-label {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #087cf5;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.gallery-heading h2 {
+    margin: 0 0 12px;
+
+    color: #17324d;
+
+    font-size: 38px;
+    line-height: 1.2;
+
+    font-weight: 800;
+}
+
+.gallery-heading p {
+    max-width: 720px;
+
+    margin: 0;
+
+    color: #687b8d;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   PHOTO GRID
+========================================= */
+
+.photo-gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   PHOTO CARD
+========================================= */
+
+.gallery-card {
+    min-width: 0;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e3ebf3;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 12px 30px rgba(15,23,42,0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #cfe3f7;
+
+    box-shadow:
+        0 20px 40px rgba(15,23,42,0.12);
+}
+
+
+/* =========================================
+   IMAGE LINK
+========================================= */
+
+.gallery-image-link {
+    display: block;
+
+    width: 100%;
+
+    text-decoration: none;
+}
+
+
+/* =========================================
+   IMAGE BOX
+========================================= */
+
+.gallery-image-box {
+    position: relative;
+
+    width: 100%;
+
+    height: 280px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #edf3f7;
+}
+
+
+/*
+   IMPORTANT:
+   contain keeps landscape and portrait photos
+   without cropping or stretching.
+*/
+
+.gallery-image-box img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit:cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.4s ease;
+}
+
+.gallery-card:hover .gallery-image-box img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================
+   IMAGE NUMBER
+========================================= */
+
+.gallery-image-number {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    z-index: 3;
+
+    min-width: 34px;
+    height: 34px;
+
+    padding: 0 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(6,36,59,0.82);
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.gallery-card-content {
+    padding: 18px;
+}
+
+.gallery-card-content h3 {
+    margin: 0 0 14px;
+
+    color: #17324d;
+
+    font-size: 16px;
+    line-height: 1.4;
+
+    font-weight: 750;
+}
+
+
+/* =========================================
+   DOWNLOAD BUTTON
+========================================= */
+
+.photo-download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    padding: 12px 16px;
+
+    border-radius: 11px;
+
+    background: #eef6ff;
+
+    color: #087cf5;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.photo-download-btn span {
+    font-size: 17px;
+
+    line-height: 1;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.photo-download-btn:hover {
+    background: #087cf5;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+.photo-download-btn:hover span {
+    transform: translateY(3px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media screen and (max-width: 1023px) {
+
+    .gallery-hero {
+        min-height: 270px;
+
+        padding: 60px 20px;
+    }
+
+    .gallery-hero h1 {
+        font-size: 40px;
+    }
+
+    .gallery-container {
+        width: calc(100% - 44px);
+    }
+
+    .photo-gallery-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 20px;
+    }
+
+    .gallery-image-box {
+        height: 270px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 767px) {
+
+    .gallery-hero {
+        min-height: 240px;
+
+        padding: 50px 16px;
+    }
+
+    .gallery-hero-label {
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+    .gallery-hero h1 {
+        font-size: 30px;
+
+        line-height: 1.2;
+    }
+
+    .gallery-hero p {
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+
+    .gallery-page {
+        padding: 40px 0 55px;
+    }
+
+    .gallery-container {
+        width: calc(100% - 24px);
+    }
+
+
+    .gallery-back-btn {
+        margin-bottom: 28px;
+
+        padding: 10px 14px;
+
+        font-size: 12px;
+    }
+
+
+    .gallery-heading {
+        margin-bottom: 25px;
+    }
+
+    .gallery-heading h2 {
+        font-size: 28px;
+
+        line-height: 1.25;
+    }
+
+    .gallery-heading p {
+        font-size: 13px;
+    }
+
+
+    .photo-gallery-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .gallery-card {
+        border-radius: 17px;
+    }
+
+
+    .gallery-image-box {
+        height: 280px;
+
+        border-radius: 0;
+    }
+
+
+    .gallery-card-content {
+        padding: 16px;
+    }
+
+    .gallery-card-content h3 {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media screen and (max-width: 359px) {
+
+    .gallery-hero {
+        min-height: 220px;
+
+        padding: 42px 12px;
+    }
+
+    .gallery-hero h1 {
+        font-size: 25px;
+    }
+
+    .gallery-hero p {
+        font-size: 12px;
+    }
+
+
+    .gallery-container {
+        width: calc(100% - 20px);
+    }
+
+
+    .gallery-heading h2 {
+        font-size: 25px;
+    }
+
+
+    .gallery-image-box {
+        height: 240px;
+    }
+
+
+    .gallery-card-content {
+        padding: 14px;
+    }
+
+    .photo-download-btn {
+        padding: 11px 14px;
+
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media screen and (min-width: 1400px) {
+
+    .gallery-container {
+        width: min(1280px, calc(100% - 80px));
+    }
+
+    .photo-gallery-grid {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+
+        gap: 26px;
+    }
+
+    .gallery-image-box {
+        height: 300px;
+    }
+
+}

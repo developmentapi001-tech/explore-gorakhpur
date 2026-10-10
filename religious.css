@@ -1,0 +1,258 @@
+/* =========================================
+           RELIGIOUS PLACES PAGE
+    ========================================= */
+
+.religious-page {
+    min-height: 100vh;
+    padding: 110px 6% 90px;
+    background: #f5f8fc;
+}
+
+
+.religious-heading {
+    max-width: 800px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+
+.religious-heading span {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    color: #087cf5;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.religious-heading h1 {
+    margin-bottom: 15px;
+
+    color: #102a43;
+
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+}
+
+
+.religious-heading p {
+    max-width: 680px;
+    margin: auto;
+
+    color: #607487;
+
+    font-size: 15px;
+    line-height: 1.8;
+
+}
+
+
+/* =========================================
+           TEMPLE LIST
+        ========================================= */
+
+.temple-list {
+    max-width: 1050px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+.temple-item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 82px;
+
+    padding: 18px 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce7ef;
+    border-radius: 16px;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 7px 22px rgba(15, 23, 42, 0.045);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.temple-item:hover {
+    transform: translateX(6px);
+
+    border-color: #b9d9ef;
+
+    box-shadow:
+        0 14px 32px rgba(15, 23, 42, 0.09);
+}
+
+
+/* NUMBER */
+
+.temple-number {
+    flex-shrink: 0;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 20px;
+
+    border-radius: 14px;
+
+    background: #eef7ff;
+
+    color: #087cf5;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    border: 1px solid #d7eafb;
+}
+
+
+/* CONTENT */
+
+.temple-info {
+    flex: 1;
+}
+
+
+.temple-info h2 {
+    margin-bottom: 4px;
+
+    color: #173b56;
+
+    font-size: 18px;
+    font-weight: 750;
+
+    line-height: 1.3;
+}
+
+
+.temple-info p {
+    margin: 0;
+
+    color: #8091a2;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* ARROW */
+
+.temple-arrow {
+    flex-shrink: 0;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 20px;
+
+    border-radius: 50%;
+
+    background: #102a43;
+
+    color: #ffffff;
+
+    font-size: 17px;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.temple-item:hover .temple-arrow {
+    background: #087cf5;
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================
+           MOBILE
+        ========================================= */
+
+@media (max-width: 600px) {
+
+    .religious-page {
+        padding: 85px 5% 60px;
+    }
+
+
+    .religious-heading {
+        margin-bottom: 35px;
+    }
+
+
+    .religious-heading h1 {
+        font-size: 36px;
+    }
+
+
+    .temple-item {
+        min-height: 76px;
+
+        padding: 14px 15px;
+    }
+
+
+    .temple-number {
+        width: 42px;
+        height: 42px;
+
+        margin-right: 13px;
+
+        border-radius: 12px;
+
+        font-size: 12px;
+    }
+
+
+    .temple-info h2 {
+        font-size: 15px;
+    }
+
+
+    .temple-info p {
+        font-size: 11px;
+    }
+
+
+    .temple-arrow {
+        width: 34px;
+        height: 34px;
+
+        margin-left: 10px;
+
+        font-size: 14px;
+    }
+
+}

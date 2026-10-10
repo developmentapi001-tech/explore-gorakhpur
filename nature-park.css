@@ -1,0 +1,487 @@
+/* ================================
+   NATURE & PARKS PAGE
+================================ */
+
+.category-page-hero {
+    position: relative;
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #061b2d 0%,
+            #0b3047 55%,
+            #123f4d 100%
+        );
+
+    overflow: hidden;
+}
+
+.category-page-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -120px;
+    bottom: -180px;
+
+    border-radius: 50%;
+
+    background: rgba(8, 124, 245, 0.12);
+}
+
+
+.category-page-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(71, 190, 143, 0.12),
+            transparent 35%
+        );
+}
+
+
+.category-page-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 800px;
+}
+
+
+.category-page-content span {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    padding: 8px 15px;
+
+    border: 1px solid rgba(255,255,255,0.22);
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.08);
+
+    color: #8fd4ff;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.category-page-content h1 {
+    margin-bottom: 15px;
+
+    color: #ffffff;
+
+    font-size: clamp(42px, 6vw, 70px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+
+.category-page-content p {
+    max-width: 650px;
+
+    color: rgba(255,255,255,0.78);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* ================================
+   PLACE LIST
+================================ */
+
+.temple-list-section {
+    padding: 85px 6%;
+
+    background: #f5f7fa;
+}
+
+
+.temple-list-section .section-heading {
+    max-width: 750px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+
+.temple-list-section .section-heading span {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #087cf5;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.temple-list-section .section-heading h2 {
+    margin-bottom: 12px;
+
+    color: #102a43;
+
+    font-size: clamp(30px, 4vw, 44px);
+
+    line-height: 1.15;
+}
+
+
+.temple-list-section .section-heading p {
+    color: #718396;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* ================================
+   LIST CONTAINER
+================================ */
+
+.temple-list {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+.temple-item {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 75px 1fr 50px;
+
+    align-items: center;
+
+    min-height: 105px;
+
+    padding: 18px 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fbfd
+        );
+
+    border: 1px solid #dce6ee;
+
+    border-radius: 18px;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 8px 25px rgba(15,23,42,0.05);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.temple-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 3px;
+    height: 100%;
+
+    background: #087cf5;
+
+    transform: scaleY(0);
+
+    transform-origin: center;
+
+    transition: transform 0.3s ease;
+}
+
+
+.temple-item:hover {
+    transform: translateY(-4px);
+
+    border-color: #b8d9ef;
+
+    box-shadow:
+        0 16px 35px rgba(15,23,42,0.10);
+}
+
+
+.temple-item:hover::before {
+    transform: scaleY(1);
+}
+
+
+/* ================================
+   NUMBER
+================================ */
+
+.temple-number {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #eef7ff;
+
+    border: 1px solid #d6eafb;
+
+    color: #087cf5;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    transition: 0.3s ease;
+}
+
+
+.temple-item:hover .temple-number {
+    background: #087cf5;
+
+    color: #ffffff;
+
+    transform: scale(1.05);
+}
+
+
+/* ================================
+   INFORMATION
+================================ */
+
+.temple-info h3 {
+    margin-bottom: 5px;
+
+    color: #173b56;
+
+    font-size: 18px;
+
+    font-weight: 750;
+}
+
+
+.temple-info p {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: #718396;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* ================================
+   ARROW
+================================ */
+
+.temple-arrow {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f1f6fa;
+
+    color: #173b56;
+
+    font-size: 20px;
+
+    transition: 0.3s ease;
+}
+
+
+.temple-item:hover .temple-arrow {
+    background: #087cf5;
+
+    color: #ffffff;
+
+    transform: translateX(4px);
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+    .category-page-hero {
+        min-height: 360px;
+
+        padding: 80px 6%;
+    }
+
+    .category-page-content h1 {
+        font-size: 45px;
+    }
+
+    .category-page-content p {
+        font-size: 15px;
+    }
+
+
+    .temple-list-section {
+        padding: 60px 5%;
+    }
+
+
+    .temple-list {
+        gap: 12px;
+    }
+
+
+    .temple-item {
+        grid-template-columns: 55px 1fr 40px;
+
+        min-height: 95px;
+
+        padding: 15px;
+    }
+
+
+    .temple-number {
+        width: 42px;
+        height: 42px;
+
+        border-radius: 12px;
+    }
+
+
+    .temple-info h3 {
+        font-size: 16px;
+    }
+
+
+    .temple-info p {
+        font-size: 12px;
+    }
+
+
+    .temple-arrow {
+        width: 34px;
+        height: 34px;
+
+        font-size: 17px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .category-page-hero {
+        min-height: 330px;
+
+        padding: 70px 6%;
+    }
+
+
+    .category-page-content h1 {
+        font-size: 38px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .category-page-content p {
+        font-size: 14px;
+    }
+
+
+    .temple-list-section {
+        padding: 50px 4%;
+    }
+
+
+    .temple-item {
+        grid-template-columns: 45px 1fr 35px;
+
+        padding: 14px 12px;
+
+        border-radius: 15px;
+    }
+
+
+    .temple-number {
+        width: 36px;
+        height: 36px;
+
+        font-size: 11px;
+    }
+
+
+    .temple-info h3 {
+        font-size: 14px;
+
+        line-height: 1.35;
+    }
+
+
+    .temple-info p {
+        font-size: 11px;
+
+        line-height: 1.5;
+    }
+
+
+    .temple-arrow {
+        width: 30px;
+        height: 30px;
+
+        font-size: 15px;
+    }
+
+}
