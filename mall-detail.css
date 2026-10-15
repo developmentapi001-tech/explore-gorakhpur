@@ -939,9 +939,9 @@
    ========================================================= */
 
 .footer{
-    position:relative;
+    /* position:relative; */
     width: 100%;
-    background:#06243b;
+    background:#071a2b;
     color: #ffffff;
     padding: 65px 0 0;
     overflow: hidden;

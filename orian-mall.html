@@ -19,6 +19,33 @@
 
     <link rel="stylesheet" href="mall-detail.css">
 
+    <style>
+        .place-detail-hero {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        @media (max-width:768px) {
+            .place-detail-hero {
+                background-size: cover;
+                background-position: 37% center;
+                background-repeat: no-repeat;
+                min-height: 450px;
+            }
+        }
+
+        @media (max-width:320px) {
+            .place-detail-hero {
+                width: 100%;
+                min-height: 320px;
+                background-size: cover;
+                background-position: 38% center !important;
+                background-repeat: no-repeat;
+            }
+        }
+    </style>
+
 </head>
 
 
@@ -123,7 +150,7 @@
     ========================================== -->
 
     <section class="place-detail-hero" style="background-image:
-             url('image/orion-mall.jpeg');">
+             url('orian mall/o\ m2.jpeg');">
 
         <div class="place-detail-overlay"></div>
 
@@ -291,7 +318,7 @@
 
                     <div class="mall-about-image">
 
-                        <img src="image/orion-mall.jpeg" alt="Orion Mall Gorakhpur">
+                        <img src="orian mall/o m1.jpeg" alt="Orion Mall Gorakhpur">
 
                     </div>
 
@@ -778,30 +805,37 @@
 
                         <div class="gallery-photo">
 
-                            <img src="image/orion-mall.jpeg" alt="Orion Mall Gorakhpur">
+                            <img src="orian mall/o m1.jpeg" alt="Orion Mall Gorakhpur">
 
                         </div>
 
 
                         <div class="gallery-photo">
 
-                            <img src="image/orion-mall.jpeg" alt="Orion Mall Gorakhpur">
+                            <img src="orian mall/o m2.jpeg" alt="Orion Mall Gorakhpur">
 
                         </div>
 
 
                         <div class="gallery-photo">
 
-                            <img src="image/orion-mall.jpeg" alt="Orion Mall Gorakhpur">
+                            <img src="orian mall/o m3.jpeg" alt="Orion Mall Gorakhpur">
 
                         </div>
 
 
                         <div class="gallery-photo">
 
-                            <img src="image/orion-mall.jpeg" alt="Orion Mall Gorakhpur">
+                            <img src="orian mall/o m4.jpeg" alt="Orion Mall Gorakhpur">
 
                         </div>
+
+                        <div class="gallery-photo">
+
+                            <img src="orian mall/o m5.jpeg" alt="Orion Mall Gorakhpur">
+
+                        </div>
+
 
 
                     </div>
@@ -809,9 +843,10 @@
 
                     <div class="gallery-download">
 
-                        <a href="image/orion-mall.jpeg" download="Orion-Mall-Gorakhpur.jpg">
-
-                            Download Photo ↓
+                        <button type="button" class="location-btn" 
+                        onclick="downloadAllPhotos()">
+                        Download All Photo
+                        </button>
 
                         </a>
 
@@ -984,6 +1019,44 @@
     ========================================== -->
 
     <script src="script.js"></script>
+
+    <script>
+    async function downloadAllPhotos() {
+        const photos = document.querySelectorAll(
+            '.gallery-grid .gallery-photo img'
+        );
+
+        if (photos.length === 0) {
+            alert('No photos found!');
+            return;
+        }
+
+        for (let i = 0; i < photos.length; i++) {
+            try {
+                const response = await fetch(photos[i].src);
+
+                if (!response.ok) {
+                    throw new Error('Photo download failed');
+                }
+
+                const blob = await response.blob();
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+
+                link.href = url;
+                link.download = `Maghar-Photo-${i + 1}.jpg`;
+
+                document.body.appendChild(link);
+                link.click();
+                link.remove();
+
+                setTimeout(() => URL.revokeObjectURL(url), 2000);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+    }
+</script>
 
 
 </body>
