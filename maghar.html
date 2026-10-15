@@ -13,6 +13,35 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="gorakhnath.css">
 
+    <style>
+
+         .place-detail-hero{
+                background-size: cover;
+                background-position:center;
+                background-repeat: no-repeat;
+            }
+
+        @media (max-width:768px){
+            .place-detail-hero{
+                background-size: cover;
+                background-position: 37% center;
+                background-repeat: no-repeat;
+                min-height: 450px;
+            }
+        }
+
+        @media (max-width:320px){
+            .place-detail-hero{
+                width: 100%;
+                min-height: 320px;
+                background-size: cover;
+                background-position:38% center !important; 
+                background-repeat: no-repeat;
+            }
+        }
+        
+    </style>
+
 </head>
 
 
@@ -788,12 +817,10 @@
                     <div class="gallery-download">
 
 
-                        <a href="maghar/m1.jpeg/m2/m3/m4/m5/m6.jpeg"
-                           download="Maghar.jpg">
-
-                            Download Photo ↓
-
-                        </a>
+                        <button type="button" class="location-btn" 
+                        onclick="downloadAllPhotos()">
+                        Download All Photo
+                        </button>
 
 
                     </div>
@@ -1001,5 +1028,43 @@
 
 
 </body>
+
+<script>
+async function downloadAllPhotos() {
+    const photos = document.querySelectorAll(
+        '.gallery-grid .gallery-photo img'
+    );
+
+    if (photos.length === 0) {
+        alert('No photos found!');
+        return;
+    }
+
+    for (let i = 0; i < photos.length; i++) {
+        try {
+            const response = await fetch(photos[i].src);
+
+            if (!response.ok) {
+                throw new Error('Photo download failed');
+            }
+
+            const blob = await response.blob();
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+
+            link.href = url;
+            link.download = `Maghar-Photo-${i + 1}.jpg`;
+
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+
+            setTimeout(() => URL.revokeObjectURL(url), 2000);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+}
+</script>
 
 </html>
