@@ -21,6 +21,35 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="gorakhnath.css">
 
+    <style>
+
+         .place-detail-hero{
+                background-size: cover;
+                background-position:center;
+                background-repeat: no-repeat;
+            }
+
+        @media (max-width:768px){
+            .place-detail-hero{
+                background-size: cover;
+                background-position: 30% center;
+                background-repeat: no-repeat;
+                min-height: 450px;
+            }
+        }
+
+        @media (max-width:320px){
+            .place-detail-hero{
+                width: 100%;
+                min-height: 320px;
+                background-size: cover;
+                background-position:30% center !important; 
+                background-repeat: no-repeat;
+            }
+        }
+        
+    </style>
+
 </head>
 
 
@@ -117,7 +146,7 @@
 
     <section class="place-detail-hero"
              style="background-image:
-             url('gorakhnath photo/gorakhnath1.jpeg');">
+             url('ambedkar park/a4.jpeg');">
 
         <div class="place-detail-overlay"></div>
 
@@ -660,7 +689,7 @@
                         <div class="gallery-photo">
 
                             <img
-                                src="gorakhnath photo/gorakhnath16.jpeg"
+                                src="ambedkar park/a1.jpeg"
                                 alt="Ambedkar Park Gorakhpur">
 
                         </div>
@@ -669,7 +698,7 @@
                         <div class="gallery-photo">
 
                             <img
-                                src="gorakhnath photo/gorakhnath12.jpeg"
+                                src="ambedkar park/a2.jpeg"
                                 alt="Ambedkar Park Taramandal">
 
                         </div>
@@ -678,7 +707,7 @@
                         <div class="gallery-photo">
 
                             <img
-                                src="gorakhnath photo/gorakhnath6.jpeg"
+                                src="ambedkar park/a3.jpeg"
                                 alt="Ambedkar Park Gorakhpur">
 
                         </div>
@@ -687,7 +716,7 @@
                         <div class="gallery-photo">
 
                             <img
-                                src="gorakhnath photo/gorakhnath5.jpeg"
+                                src="ambedkar park/a4.jpeg"
                                 alt="Ambedkar Park">
 
                         </div>
@@ -695,7 +724,7 @@
                         <div class="gallery-photo">
 
                             <img
-                                src="gorakhnath photo/gorakhnath3.jpeg"
+                                src="ambedkar park/a5.jpeg"
                                 alt="Ambedkar Park">
 
                         </div>
@@ -703,7 +732,7 @@
                         <div class="gallery-photo">
 
                             <img
-                                src="gorakhnath photo/gorakhnath18.jpeg"
+                                src="ambedkar park/a6.jpeg"
                                 alt="Ambedkar Park">
 
                         </div>
@@ -714,13 +743,10 @@
 
                     <div class="gallery-download">
 
-                        <a
-                            href="image/ambedkar-park.jpeg"
-                            download="Ambedkar-Park-Gorakhpur.jpg">
-
-                            Download Photo ↓
-
-                        </a>
+                        <button type="button" class="location-btn" 
+                        onclick="downloadAllPhotos()">
+                        Download All Photo
+                        </button>
 
                     </div>
 
@@ -891,6 +917,44 @@
     ========================================== -->
 
     <script src="script.js"></script>
+
+    <script>
+async function downloadAllPhotos() {
+    const photos = document.querySelectorAll(
+        '.gallery-grid .gallery-photo img'
+    );
+
+    if (photos.length === 0) {
+        alert('No photos found!');
+        return;
+    }
+
+    for (let i = 0; i < photos.length; i++) {
+        try {
+            const response = await fetch(photos[i].src);
+
+            if (!response.ok) {
+                throw new Error('Photo download failed');
+            }
+
+            const blob = await response.blob();
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+
+            link.href = url;
+            link.download = `Ambedkar Park-${i + 1}.jpg`;
+
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+
+            setTimeout(() => URL.revokeObjectURL(url), 2000);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+}
+</script>
 
 
 </body>
