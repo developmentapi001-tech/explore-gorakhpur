@@ -11,6 +11,35 @@
     <link rel="stylesheet" href="gorakhnath.css">
 </head>
 
+    <style>
+
+        .place-detail-hero {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+      @media (max-width:768px){
+            .place-detail-hero{
+                background-size: cover;
+                background-position: 40% center;
+                background-repeat: no-repeat;
+                min-height: 450px;
+            }
+        }
+
+        @media (max-width:320px){
+            .place-detail-hero{
+                width: 100%;
+                min-height: 320px;
+                background-size: cover;
+                background-position:40% center!important; 
+                background-repeat: no-repeat;
+            }
+        }
+        
+    </style>
+
 <body>
 
     <!-- HEADER -->
@@ -76,10 +105,9 @@
 
     <!-- HERO -->
 
-    <section class="place-detail-hero">
-
-        <img src="gorakhnath photo/gorakhnath21.jpeg" alt="Gorakhnath Temple">
-
+     <section class="place-detail-hero" style="background-image:
+             url('gorakhnath photo/gorakhnath21.jpeg');">
+             
         <div class="place-detail-overlay"></div>
 
         <div class="place-detail-title">
